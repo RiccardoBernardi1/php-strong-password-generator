@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  color: white;
+}
+form {
+  background-color: white;
+  color: black;
+}
+.password-container {
+  background-color: aqua;
+  color: black;
+}
