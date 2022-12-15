@@ -12,12 +12,7 @@
     <title>Password Generated</title>
 </head>
 <body>
-    <header class="mt-5 py-5">  
-        <div class="container text-center">
-            <h1 class="fw-bold">Strong Password Generator</h1>
-            <h2 class="fw-bold">Genera una password sicura</h2>
-        </div>
-    </header>  
+    <?php include __DIR__ ."/header.php" ?>  
     <main class="container">
         <div class="password-container py-4 px-3 rounded-3 mt-5">
             <h4 class="text-center fw-bold">La tua nuova password</h4>

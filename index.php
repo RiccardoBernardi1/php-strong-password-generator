@@ -17,17 +17,12 @@ if(!empty($_GET["length"])){
     <title>Strong Password Generator</title>
 </head>
 <body>
-    <header class="mt-5 py-5">
-        <div class="container text-center">
-            <h1 class="fw-bold">Strong Password Generator</h1>
-            <h2 class="fw-bold">Genera una password sicura</h2>
-        </div>
-    </header>  
+    <?php include __DIR__ ."/header.php" ?> 
     <main>
         <div class="container">
             <form action="index.php" method="GET" class="mt-3 px-3 py-5 rounded-3"> 
                 <label for="length" class="fw-bold me-3">Lunghezza password : </label>
-                <input type="number" name="length" id="length" class="text-center me-3" min="4">
+                <input type="number" name="length" id="length" class="text-center me-3" min="8">
                 <button type="submit" class="btn btn-success">Invia</button>
             </form>
         </div>
