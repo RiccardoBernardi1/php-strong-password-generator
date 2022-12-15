@@ -1,5 +1,10 @@
 <?php 
+session_start();
 include __DIR__ ."/functions.php";
+if(!empty($_GET["length"])){
+    $_SESSION['password']=RandomString($_GET["length"]);
+    header("Location: http://localhost/php-strong-password-generator/password.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,18 +25,9 @@ include __DIR__ ."/functions.php";
     </header>  
     <main>
         <div class="container">
-            <div class="password-container py-4 px-3 rounded-3"><?php 
-             if(!empty($_GET["length"])){
-                echo "<h4 class=\"text-center fw-bold\">La tua nuova password :</h4>" ;
-                echo RandomString($_GET["length"]);
-             }else{
-                echo "Nessun parametro valido inserito";
-             }
-             ?> 
-            </div>
             <form action="index.php" method="GET" class="mt-3 px-3 py-5 rounded-3"> 
-                <label for="length" class="fw-bold">Lunghezza password : </label>
-                <input type="number" name="length" id="length" class="text-center">
+                <label for="length" class="fw-bold me-3">Lunghezza password : </label>
+                <input type="number" name="length" id="length" class="text-center me-3" min="4">
                 <button type="submit" class="btn btn-success">Invia</button>
             </form>
         </div>
